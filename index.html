@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SpotTheDiff.exe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="os-window" id="mainWindow">
+<div class="title-bar" id="titleBar">
+<span class="title-text" id="titleText">SpotTheDiff.exe - [Level 1]</span>
+<div class="title-controls">
+<button class="win-btn">_</button>
+<button class="win-btn">□</button>
+<button class="win-btn">X</button>
+</div>
+</div>
+<div class="menu-bar">
+<span>File</span>
+<span>Edit</span>
+<span>Help</span>
+</div>
+<div class="content-area">
+<div class="game-container">
+<div class="room" id="room"></div>
+</div>
+<div class="sidebar">
+<div class="panel">
+<div class="panel-header">Progress</div>
+<div class="panel-body">
+Found: <span id="score">0</span> / 5
+</div>
+</div>
+<div class="panel">
+<div class="panel-header">Message</div>
+<div class="panel-body msg-box" id="msgBox">
+Find the 5 differences in this cozy room!
+</div>
+</div>
+</div>
+</div>
+<div class="status-bar">
+<span id="statusText">Ready</span>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
