@@ -88,6 +88,63 @@ width: 100%;
 height: 100%;
 position: relative;
 }
+.wall{
+position: absolute;
+top: 0; left: 0; right: 0; height: 70%;
+background: #e0c090;
+}
+.floor{
+position: absolute;
+bottom: 0; left: 0; right: 0; height: 30%;
+background: #8b5a2b;
+}
+.window-frame{
+position: absolute;
+top: 10%; left: 60%; width: 25%; height: 30%;
+background: #fff;
+border: 4px solid #888;
+}
+.window-glass{
+width: 100%; height: 100%;
+background: #87CEEB;
+}
+.closet{
+position: absolute;
+top: 30%; left: 10%; width: 15%; height: 40%;
+background: #654321;
+border: 2px solid #000;
+}
+.closet-door{
+width: 100%; height: 100%;
+background: #8b5a2b;
+}
+.bed{
+position: absolute;
+bottom: 10%; left: 30%; width: 30%; height: 20%;
+background: #444;
+}
+.bed-sheet{
+width: 100%; height: 100%;
+background: #fff;
+}
+.poster{
+position: absolute;
+top: 20%; left: 35%; width: 15%; height: 15%;
+background: #ff00ff;
+border: 2px solid #000;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+font-weight: bold;
+color: #000;
+}
+.door{
+position: absolute;
+top: 20%; right: 5%; width: 10%; height: 50%;
+background: #555;
+border: 2px solid #000;
+}
 .sidebar{
 flex: 1;
 display: flex;
