@@ -3,6 +3,7 @@ var found = [false, false, false, false, false];
 var isDead = false;
 var s1 = new Audio('assets/sfx_click.mp3');
 var s2 = new Audio('assets/sfx_creak.mp3');
+var s3 = new Audio('assets/sfx_heartbeat.mp3');
 var s4 = new Audio('assets/sfx_glitch.mp3');
 var msgs =[
 "Find the 5 differences in this cozy room!",
@@ -21,7 +22,13 @@ function updateUI(){
 document.getElementById('score').innerText = score;
 document.getElementById('msgBox').innerText = msgs[score];
 document.getElementById('statusText').innerText = 'Processing...';
-}
+if(score >= 3){
+document.body.classList.add('corrupted');
+document.getElementById('titleBar').classList.add('corrupted');
+s3.loop = true;
+playSnd(s3);
+ }
+} 
 function checkHotspot(index){
 if(isDead || found[index])
 return;
