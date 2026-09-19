@@ -5,6 +5,7 @@ var s1 = new Audio('assets/sfx_click.mp3');
 var s2 = new Audio('assets/sfx_creak.mp3');
 var s3 = new Audio('assets/sfx_heartbeat.mp3');
 var s4 = new Audio('assets/sfx_glitch.mp3');
+var s5 = new Audio('assets/sfx_scream.mp3');
 var msgs =[
 "Find the 5 differences in this cozy room!",
 "Good eye! Keep looking...",
@@ -59,6 +60,25 @@ document.getElementById('doorShadow').style.display = 'block';
 playSnd(s4);
 }
 updateUI();
+if(score >= 5){
+triggerEnd();
+ }
+}
+function triggerEnd(){
+isDead = true;
+document.getElementById('statusText').innerText = 'FATAL ERROR';
+if(s3){
+s3.pause();
+s3.currentTime = 0;
+}
+setTimeout(function(){
+document.getElementById('jumpscare').style.display = 'flex';
+playSnd(s5);
+setTimeout(function(){
+document.body.innerHTML = '';
+document.body.style.background = '#000';
+ }, 2000);
+  }, 1500);
 }
 document.getElementById('h1').addEventListener('click', function(){checkHotspot(0);});
 document.getElementById('h2').addEventListener('click', function(){checkHotspot(1);});
